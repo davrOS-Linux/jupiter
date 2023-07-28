@@ -1,2 +1,2 @@
 # jupiter
-Steam Deck "Emulator". Part of davrOS
+Steam Deck "Emulator". Part of davrOS.
