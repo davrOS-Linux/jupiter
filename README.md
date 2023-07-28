@@ -1,3 +1,3 @@
 # Jupiter
-![Jupiter](images/branding/jupiter2.png)
+![Jupiter](images/branding/jupiter.png)
 Steam Deck "Emulator". Part of davrOS.
