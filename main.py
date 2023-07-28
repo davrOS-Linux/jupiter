@@ -16,16 +16,21 @@ upscaling_methods_list = [
 ]
 
 upscaling_method_number = 0
+upscaling_method_numbers = []
 
 for upscaling_method in upscaling_methods_list:
     print(upscaling_method)
     upscaling_method_number = upscaling_method_number + 1
+    upscaling_method_numbers.append(upscaling_method_number)
 
-upscaling_method = input("")
+upscaling_method = None
 
-upscaling = input(
-    "Would you like to use an upscaling method?\n1. AMD FidelityFX Super Resolution\n2. NVIDIA Image Scaling\n3. "
-    "Integer Scaling (Fit)\n4. Stretch Scaling")
+while upscaling_method not in upscaling_method_numbers:
+    upscaling_method = input(f"Enter Upscaling Method (1-{upscaling_method_number})")
+    if upscaling_method not in upscaling_method_numbers:
+        print("Error: Invalid Choice")
+    else:
+        print(f"Upscaling Method: {upscaling_method}")
 
 flags = {
     "game_width": game_width,
