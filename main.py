@@ -9,10 +9,10 @@ window_width = input("Enter Width of rendered window: ")
 window_height = input("Enter Height of rendered window: ")
 
 upscaling_methods_list = [
-    "AMD FidelityFX Super Resolution",
-    "NVIDIA Image Scaling",
-    "Integer Scaling",
-    "Stretch Scaling",
+    "fsr: AMD FidelityFX Super Resolution",
+    "nis: NVIDIA Image Scaling",
+    "integer: Integer Scaling",
+    "stretch: Stretch Scaling",
     "none"
 ]
 
@@ -37,15 +37,29 @@ while True:
             print("Error: Invalid Choice")
             upscaling_method_valid = False
         else:
-            print(f"Upscaling Method: {upscaling_methods_list[int(upscaling_method)]}")
+            print(f"Upscaling Method: {upscaling_methods_list[int(upscaling_method) - 1]}")
             break
+
+valid_gamescope_version_options = ["y", "n"]
+gamescope_version = None
+
+while gamescope_version not in valid_gamescope_version_options:
+    gamescope_version = input("Are you using an older version of gamescope? (y, n)")
+    if gamescope_version not in valid_gamescope_version_options:
+        print("Error: Invalid Choice")
+
+if gamescope_version == "y":
+    gamescope_version = "old"
+else:
+    gamescope_version = "new"
 
 flags = {
     "game_width": game_width,
     "game_height": game_height,
     "window_width": window_width,
     "window_height": window_height,
-    "upscaling": upscaling_method
+    "upscaling": upscaling_methods_list[int(upscaling_method)].split(":")[0],
+    "gamescope_version": gamescope_version
 }
 
 deck_ui(flags)
