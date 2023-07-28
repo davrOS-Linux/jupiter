@@ -26,7 +26,7 @@ for upscaling_method in upscaling_methods_list:
 upscaling_method = None
 
 while upscaling_method not in upscaling_method_numbers:
-    upscaling_method = input(f"Enter Upscaling Method (1-{upscaling_method_number})")
+    upscaling_method = input(f"Enter Upscaling Method (1-{upscaling_method_number}): ")
     if upscaling_method not in upscaling_method_numbers:
         print("Error: Invalid Choice")
     else:
