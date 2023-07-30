@@ -9,10 +9,10 @@ window_width = input("Enter Width of rendered window: ")
 window_height = input("Enter Height of rendered window: ")
 
 upscaling_methods_list = [
-    "fsr: AMD FidelityFX Super Resolution",
-    "nis: NVIDIA Image Scaling",
+    "fsr: AMD FidelityFX™ Super Resolution 1.0",
+    "nis: NVIDIA Image Scaling v1.0.3",
     "integer: Integer Scaling",
-    "stretch: Stretch Scaling",
+    "nearest neighbor filter: Nearest Neighbor Filtering",
     "none"
 ]
 
@@ -44,14 +44,16 @@ valid_gamescope_version_options = ["y", "n"]
 gamescope_version = None
 
 while gamescope_version not in valid_gamescope_version_options:
-    gamescope_version = input("Are you using an older version of gamescope? (y, n)")
+    gamescope_version = input("Are you using an older version of gamescope? (y, n): ")
     if gamescope_version not in valid_gamescope_version_options:
         print("Error: Invalid Choice")
 
 if gamescope_version == "y":
     gamescope_version = "old"
-else:
+elif gamescope_version == "n":
     gamescope_version = "new"
+else:
+    print("bad gamescope option")
 
 flags = {
     "game_width": game_width,
