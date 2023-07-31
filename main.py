@@ -38,6 +38,7 @@ while True:
             upscaling_method_valid = False
         else:
             print(f"Upscaling Method: {upscaling_methods_list[int(upscaling_method) - 1]}")
+            upscaling_method = int(upscaling_method) - 1
             break
 
 valid_gamescope_version_options = ["y", "n"]
