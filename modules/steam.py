@@ -29,7 +29,7 @@ def deck_ui(flags_gs):
             upscaling_gs_fsr_sharpness = None
 
             while True:
-                upscaling_gs_fsr_sharpness = input("Enter AMD FidelityFX™ Super Resolution sharpness from 0 (max) to 20 (min) ")
+                upscaling_gs_fsr_sharpness = input("Enter AMD FidelityFX™ Super Resolution sharpness from 0 (max) to 20 (min): ")
                 if not upscaling_gs_fsr_sharpness.isnumeric():
                     print("Error: Invalid Choice")
                 else:
