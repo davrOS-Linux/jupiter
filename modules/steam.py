@@ -47,4 +47,6 @@ def deck_ui(flags_gs):
     else:
         print("Error: Unknown Gamescope Version")
         sys.exit()
+
+    run("steam -shutdown")
     run(gamescope_setup)
