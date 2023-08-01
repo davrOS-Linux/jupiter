@@ -9,3 +9,15 @@
 ### Features:
 - Gamescope Management
 - Launch games from Steam or other sources
+
+### Configuration Options
+- Game Width
+- Game Height
+- Window Width
+- Window Height
+- Upscaling Method
+- FSR Sharpness
+- Gamescope Version
+- Fullscreen
+- Borderless Window
+- Steam Integration
