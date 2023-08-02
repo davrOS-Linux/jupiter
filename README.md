@@ -15,7 +15,7 @@
 - Game Height
 - Window Width
 - Window Height
-- Upscaling Method
+- Upscaling Method (fsr, nis, etc.)
 - FSR Sharpness
 - Gamescope Version
 - Fullscreen
