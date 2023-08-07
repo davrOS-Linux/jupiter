@@ -21,3 +21,5 @@
 - Fullscreen
 - Borderless Window
 - Steam Integration
+
+Gamescope Session support coming soon.
